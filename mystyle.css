@@ -1,3 +1,6 @@
+html {
+    width:fit-content;
+}
 header{ /*header display*/
     display: flex;
     flex-wrap: wrap;
@@ -45,20 +48,19 @@ a:hover { /*link hove color change*/
     background-color: darkblue;
 }
 
-.design{ /*backgrond design space break*/
+.design { /*backgrond design space break*/
     display: flex;
     flex-wrap: wrap;
-    height:400px;
+    height: 200px;
     width: 100%;
-    background-image: url(Images/modern-banner-with-abstract-low-poly-design_1048-14340.avif);
+    background-image: url("Images/modern-banner-with-abstract-low-poly-design_1048-14340.png");
     background-size: cover;
 }
 
 #cool-sub-title{ /*name postioning font size*/
     display: flex;
     flex-wrap: wrap;
-    position: absolute;
-    bottom: 55%;
+    position: absolute;    
     right: 5%;
     font-size: 30px;
 }
@@ -69,54 +71,51 @@ a:hover { /*link hove color change*/
     flex-wrap: wrap;
 }
 
-.about{ /*about me text font display size*/
+.about { /*about me text font display size*/
     display: flex;
-    font-size: 50px;
+    flex-direction: row;
     justify-content: start;
     text-align: right;
-    margin-left: 50px;
+    margin-left: 20px;
     color: rgb(46, 42, 69);
 }
 
 .about-bio{ /*text area for bio*/
-    font-size: 25px;
-    text-align: center;
-    margin-top: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
+    text-align: justify;    
+    font-size:1.5em;
+    padding: 20px;
+    width:61%;
 }
 
 .box{ /*line for work box*/
-    Border:solid;
+    font-size:1.7em;
+    border:solid;
     border-width: 10px;
     border-bottom: hidden;
     border-top: hidden;
     border-left: hidden;
     padding: 20px;
     margin: 10px;
+    width:100px;
 }
 
-.work{ /*work text display and margins*/
+.work { /*work text display and margins*/
     display: flex;
-    font-size: 50px;
-    text-align: center;
-    margin-left: 105px;
+    flex-direction: row;
+    justify-content: start;
+    text-align: right;
+    margin-left: 20px;
     color: rgb(46, 42, 69);
 }
 
-.work-box{ /*work area display and margins*/
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    justify-content: center;
+.work2 { /*work2 text display and margins*/
+    width: fit-content;
 }
 
 .pictures1 img{ /*top link image sizing*/
-    width: 1200px;
-    height: 400px;
+    max-height:100%;
+    min-width:100%;
+    object-fit:cover;    
     margin: 20px;
     border: solid lightblue;
 }
@@ -126,22 +125,24 @@ a:hover { /*link hove color change*/
     flex-direction: row;
 }
 
-.pictures2 img{ /*link picture sizing middle*/
-    width: 600px;
-    height: 200px;
-    margin: 10px;
+.pictures2 img { /*link picture sizing middle*/
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    margin: 20px;
     border: solid lightblue;
 }
 
-.pictures4{ /*diplay link picture bottom 2*/
-   display: flex;
-   flex-wrap: wrap;
+.pictures4 { /*diplay link picture bottom 2*/
+    display: flex;
+    flex-direction: row;
 }
 
-.pictures4 img{ /*link picture sizing bottom 2*/
-    width: 600px;
-    height: 200px;
-    margin: 10px;
+.pictures4 img { /*link picture sizing bottom 2*/
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    margin: 20px;
     border: solid lightblue;
 }
 
@@ -155,13 +156,11 @@ a:hover { /*link hove color change*/
     margin: 10px;
 }
 
-.contact{ /*margins and colors for contacts*/
+.contact { /*margins and colors for contacts*/
     display: flex;
-    font-size: 50px;
+    flex-direction: row;
     justify-content: start;
     text-align: right;
-    height: 200px;
-    width: 100%;
     margin-left: 20px;
     color: rgb(46, 42, 69);
 }
@@ -171,7 +170,7 @@ a:hover { /*link hove color change*/
     border-width: 10px;
     border-bottom: hidden;
     border-top: hidden;
-    border-left: hidden;
+    border-right: hidden;
     padding: 28px;
     width:min-content;
     margin-left: -6px;
@@ -179,13 +178,17 @@ a:hover { /*link hove color change*/
 
 .contact-info{ /*display and font for contact area*/
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-size: 25px;
-    width: 80%;
+    flex-direction: row;    
+    font-size: 1.5em;    
     justify-content: space-evenly;
     align-items: center;
     color:slategray
+}
+
+.contact-info span {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .row1{ /*flex row for contact section*/
@@ -210,7 +213,8 @@ a:hover { /*link hove color change*/
     font-size: 16px;
     font-weight: normal;
 }
-@media screen and (max-width: 992px) {
+/*
+    @media screen and (max-width: 992px) {
     .work {
         width: 50%;
     }
@@ -226,18 +230,20 @@ a:hover { /*link hove color change*/
   }
   
   /* Cards are stacked on top of each other at 768px or smaller */
-  @media screen and (max-width: 768px) {
+/*
+    @media screen and (min-width: 768px) {
     .work {
         width: 50%;
-      }
+         }
     .row1{
           width:50%;
-      }
+         }
     .box3{
           width: 50%;
-      }
-      .row{
-        width: 50%
+         }
+    .row{
+    width: 50%
+        }
     }
-    }
+*/
   
